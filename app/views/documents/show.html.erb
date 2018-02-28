@@ -1,4 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<% @document.get_dup_attributes.each do |k,v| %>
+  <% k.times do %>
+    <% v.uniq.each do |vv| %>
+      <%= vv %>
+      <%# sleep 3.seconds %>
+    <% end %>
+  <% end %>
+<% end %>
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
