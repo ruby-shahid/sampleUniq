@@ -1,5 +1,9 @@
+<style>
+tr.hidden {
+    display: none;
+}
+</style>
 <p id="notice"><%= notice %></p>
-
 <table class="table table-striped table-narrow">
   <thead>
     <tr>
@@ -10,13 +14,24 @@
     <% @document.get_dup_attributes.each do |k,v| %>
       <% k.times do %>
         <% v.uniq.each do |vv| %>
-        <tr>
+        <tr class="hidden">
           <td><%= vv %></td>
           <% end %>
         </tr>
         <% end %>
     <% end %>
   </tbody>    
-  
+
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    if ($(".table tbody tr").length > 1){
+      $(".table tbody tr").each(function(i,el){
+        setTimeout(function (){
+          $(".table tbody tr").eq(i).show();
+        }, 3000 + (i * 3000));
+      })
+    }
+  });
+</script>

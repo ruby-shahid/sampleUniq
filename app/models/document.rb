@@ -8,6 +8,11 @@ class Document < ApplicationRecord
   validates_attachment_file_name :file_tree, matches: [/\.csv$/]
   validates_attachment_file_name :file_four, matches: [/\.csv$/]
 
+  validates_attachment_presence :file_one
+  validates_attachment_presence :file_two
+  validates_attachment_presence :file_tree
+  validates_attachment_presence :file_four
+
   validates_numericality_of :compare_col, greater_than: 0
 
 
