@@ -6,19 +6,15 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  ruby-2.5.0
 
-* System dependencies
+* Rails version
+  Rails 5.1.5
 
-* Configuration
+* Clone the repository from master then specify your Msql db user_name and password in database.yml
 
-* Database creation
+* run rails db:create and rails db:migrate 
 
-* Database initialization
+* start the server as rails s then you can get going
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* there is no s3 based setup all files are stroing in local storage itself.
