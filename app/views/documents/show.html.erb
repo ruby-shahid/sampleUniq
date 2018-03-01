@@ -1,13 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<% @document.get_dup_attributes.each do |k,v| %>
-  <% k.times do %>
-    <% v.uniq.each do |vv| %>
-      <%= vv %>
-      <%# sleep 3.seconds %>
+<table class="table table-striped table-narrow">
+  <thead>
+    <tr>
+      <th>Column <%= @document.compare_col%> Comparision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @document.get_dup_attributes.each do |k,v| %>
+      <% k.times do %>
+        <% v.uniq.each do |vv| %>
+        <tr>
+          <td><%= vv %></td>
+          <% end %>
+        </tr>
+        <% end %>
     <% end %>
-  <% end %>
-<% end %>
-
+  </tbody>    
+  
 <%= link_to 'Edit', edit_document_path(@document) %> |
 <%= link_to 'Back', documents_path %>

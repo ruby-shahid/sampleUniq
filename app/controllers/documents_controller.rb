@@ -70,7 +70,7 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:file_one, :file_two, :file_tree, :file_four)
+      params.require(:document).permit(:file_one, :file_two, :file_tree, :file_four, :compare_col)
       # params.require(:comment).permit(:id, :commentable_type, :commentable_id, :body)
     end
 end

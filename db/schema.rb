@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180228172349) do
+ActiveRecord::Schema.define(version: 20180301033539) do
 
   create_table "documents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "file_one_file_name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180228172349) do
     t.datetime "file_four_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "compare_col"
   end
 
 end
