@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 gem "paperclip", "~> 5.2.1"
 gem 'csv'
 gem 'roo'
+gem 'aws-sdk', '2.10.47'
+gem 'open-uri-s3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
